@@ -28,7 +28,7 @@ Do not put site blocking, live accountability messages, device-owner provisionin
 - Owner decisions: confirmed — one primary Codex-assisted build lane over three to four calendar days, roughly six to ten human hands-on hours, voluntary adult self-use, app-first MVP, 24-hour product default, and milestone pauses.
 - Technical specification: complete; core implementation and safety verification are complete.
 - Build checklist: items 1–9 complete. The integrated ratchet, honest service state, monotonic expiry, delayed-recovery information, local-only accountability preview, and failure-mode regression matrix are verified.
-- Next gate: item 10, the Devpost handoff, must prove clean reproducibility, finish the public four-minute recording and Cloud screenshots, publish the repository only with owner approval, and replace the stale submission copy. Nothing has been submitted.
-- Git repository: initialized locally; nothing has been published.
+- Next gate: item 10, the Devpost handoff, must finish the sanitized four-minute recording and Cloud screenshots, publish the owner-approved video, and replace the stale submission copy. Nothing has been submitted.
+- Git repository: public at https://github.com/zhangshen20/looplock; `main` is checked from an unauthenticated client after publication.
 - Google Cloud: private revision `looplock-agent-00004-ztf` is serving in project `looplock-hackathon-2026-v8k3`; the Standard Native-mode `(default)` Firestore database is in `australia-southeast1`, the keyless runtime identity has only `roles/aiplatform.user` and `roles/datastore.user`, and no public service access exists.
 - Devpost: draft exists but was not edited or submitted in this work.

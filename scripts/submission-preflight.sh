@@ -57,7 +57,7 @@ if rg -n \
 fi
 
 for ignored_path in android/local.properties backend/.venv .env .gcloud/placeholder; do
-  if ! git check-ignore -q "${ignored_path}"; then
+  if ! git check-ignore --no-index -q "${ignored_path}"; then
     echo "FAIL: sensitive/local path is not ignored: ${ignored_path}" >&2
     exit 1
   fi

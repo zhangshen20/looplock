@@ -289,3 +289,10 @@ Item 10: prepare the reproducible README, final evidence package, four-minute pu
 - The owner approved the architecture and explicitly authorized GitHub login, a repository-local GitHub noreply identity, creation of the public repository `zhangshen20/looplock`, and push.
 - The reproducible README and Devpost draft now use the intended public URL. Publication still requires account verification, the final credential/privacy scan, and a signed-out availability check.
 - This authorization does not include public video upload, Devpost editing, architecture upload, or submission.
+
+## 26 August 2026 — Public repository published and checked
+
+- Authenticated GitHub CLI as the intended account `zhangshen20`, configured the repository-only identity `zhangshen20 <zhangshen20@users.noreply.github.com>`, created public repository `zhangshen20/looplock`, and pushed `main`.
+- Verified both the repository page and raw `README.md` returned HTTP 200 without supplying GitHub credentials.
+- A fresh public clone exposed that `submission-preflight.sh` required ignored local paths to exist. Updated the ignore verification to use `git check-ignore --no-index`, so a pristine clone validates the ignore contract correctly.
+- Public video upload, Devpost editing, architecture upload, and submission remain unperformed and unauthorized.

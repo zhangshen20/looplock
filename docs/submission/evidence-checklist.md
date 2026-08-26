@@ -32,8 +32,9 @@ Status: engineering acceptance passed twice on 25 August 2026; item-9 safety reg
 - [x] A clean-source rehearsal excluding build outputs, caches, `local.properties`, `.env`, and `.git` passed `make verify`, assembled all three APKs, and served `/healthz` on 26 August 2026.
 - [x] Android and backend automated tests pass.
 - [x] Initial installation excludes LuckyMirror; the later workaround script installs it only during the active commitment.
-- [ ] The public repository, video, and architecture links work in an incognito session.
-- [ ] Final secret scan passes before any publication.
+- [x] The public repository and raw README return HTTP 200 without GitHub credentials.
+- [ ] The public video and final architecture link work in an incognito session.
+- [x] Final repository secret scan passed immediately before publication.
 
 ## Devpost field gate
 
@@ -41,6 +42,6 @@ Status: engineering acceptance passed twice on 25 August 2026; item-9 safety reg
 - [x] Local description draft replaces the stale breathing/walking companion with the truthful LoopLock implementation.
 - [x] Draft consistently names Taskmaster, Gemini 3.5 Flash, Google ADK, Cloud Run, and Firestore.
 - [x] Owner advanced the recommended defaults: individual, Australia, `08-19-26`, and no optional-prize/content entries.
-- [x] Owner chose a public GitHub repository and public YouTube video; their creation/publication remains separately approval-gated.
-- [ ] Upload-ready architecture file is visually inspected by the owner.
+- [x] Owner chose a public GitHub repository and public YouTube video; repository creation/publication was explicitly authorized and completed.
+- [x] Upload-ready architecture file was visually approved by the owner.
 - [ ] Public video is timed, processed, owner-reviewed, and checked while signed out.
