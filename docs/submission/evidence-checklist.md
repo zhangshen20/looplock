@@ -28,7 +28,7 @@ Status: engineering acceptance passed twice on 25 August 2026; item-9 safety reg
 
 ## Reproducibility gate
 
-- [ ] Clean-checkout instructions run without undocumented files or credentials.
+- [x] A fresh clone of the public `main` branch passed `make submission-preflight` and `make verify` without undocumented files or credentials.
 - [x] A clean-source rehearsal excluding build outputs, caches, `local.properties`, `.env`, and `.git` passed `make verify`, assembled all three APKs, and served `/healthz` on 26 August 2026.
 - [x] Android and backend automated tests pass.
 - [x] Initial installation excludes LuckyMirror; the later workaround script installs it only during the active commitment.
