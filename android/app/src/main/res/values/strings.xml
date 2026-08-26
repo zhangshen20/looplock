@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LoopLock</string>
+    <string name="accessibility_service_label">LoopLock selected-app protection</string>
+    <string name="accessibility_service_description">Observes only the foreground identity of selected demo packages and shows a LoopLock block overlay from local rules. It does not retrieve window content.</string>
+</resources>

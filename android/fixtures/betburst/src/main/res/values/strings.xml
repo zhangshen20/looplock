@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BetBurst Demo</string>
+    <style name="FixtureTheme" parent="android:style/Theme.Material.Light.NoActionBar" />
+</resources>
+

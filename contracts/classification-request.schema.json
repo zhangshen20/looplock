@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://looplock.local/contracts/classification-request.schema.json",
+  "title": "LoopLock classification request v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "commitment_id", "target"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "event_id": { "type": "string", "format": "uuid" },
+    "commitment_id": { "type": "string", "format": "uuid" },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "package_name", "label", "version_code"],
+      "properties": {
+        "type": { "const": "PACKAGE" },
+        "package_name": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 255,
+          "pattern": "^[A-Za-z][A-Za-z0-9_]*(\\.[A-Za-z][A-Za-z0-9_]*)+$"
+        },
+        "label": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "version_code": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}
+

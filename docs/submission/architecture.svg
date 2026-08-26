@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">LoopLock architecture: deterministic Android enforcement and bounded Google Cloud agent</title>
+  <desc id="description">A landscape architecture diagram. On the left, an Android trust boundary contains consent and policy UI, targeted package and install events, an immutable local rule store, a minimal retryable outbox, a monotonic response validator, and a package-only enforcer. The local store alone feeds the enforcer. A dashed demo-only transport passes through an IAM-authenticated Mac proxy using adb reverse on port 8081. On the right, a private Google Cloud boundary contains Cloud Run, Firestore, a Google ADK agent, and Gemini 3.5 Flash. Cloud returns only TIGHTEN or REVIEW proposals. A red barred label states that cloud has no authority to write the Android store or call the enforcer.</desc>
+  <defs>
+    <marker id="arrow-local" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#047857"/>
+    </marker>
+    <marker id="arrow-transport" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1D4ED8"/>
+    </marker>
+    <marker id="arrow-cloud" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .title { font: 700 34px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0F172A; }
+      .subtitle { font: 400 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .boundary-title { font: 700 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .boundary-note { font: 500 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .box-title { font: 700 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0F172A; }
+      .box-text { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #334155; }
+      .edge-label { font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #334155; }
+      .legend { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #334155; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#F8FAFC"/>
+  <text x="48" y="54" class="title">LoopLock: enforcement stays local; the agent can only propose tighter protection</text>
+  <text x="48" y="86" class="subtitle">Verified consumer-mode fixture architecture • private cloud classification • demo transport shown with dashed lines</text>
+
+  <rect x="40" y="125" width="850" height="750" rx="24" fill="#ECFDF5" stroke="#047857" stroke-width="3"/>
+  <text x="70" y="164" class="boundary-title" fill="#065F46">Android device — deterministic trust boundary</text>
+  <text x="70" y="188" class="boundary-note" fill="#047857">Only local code creates, validates, persists, and enforces protection</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="225" width="270" height="116" rx="14" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <text x="102" y="255" class="box-title">Consent + policy UI</text>
+    <text x="102" y="281" class="box-text">Calm-state, time-bound commitment</text>
+    <text x="102" y="304" class="box-text">Explicit fixture + quarantine choice</text>
+    <text x="102" y="327" class="box-text">No active unlock path</text>
+
+    <rect x="80" y="405" width="270" height="130" rx="14" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <text x="102" y="435" class="box-title">Targeted Android events</text>
+    <text x="102" y="461" class="box-text">Foreground package identity</text>
+    <text x="102" y="484" class="box-text">BetBurst / LuckyMirror only</text>
+    <text x="102" y="507" class="box-text">Quarantine before upload</text>
+
+    <rect x="80" y="655" width="270" height="126" rx="14" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <text x="102" y="685" class="box-title">Package-only enforcer</text>
+    <text x="102" y="711" class="box-text">Reads locally validated rules</text>
+    <text x="102" y="734" class="box-text">Blocks offline; neutral overlay</text>
+    <text x="102" y="757" class="box-text">Reports Action required if off</text>
+
+    <rect x="430" y="225" width="325" height="140" rx="14" fill="#FFFFFF" stroke="#34D399" stroke-width="2"/>
+    <text x="454" y="255" class="box-title">Immutable local state (Room)</text>
+    <text x="454" y="281" class="box-text">Commitment + additive package rules</text>
+    <text x="454" y="304" class="box-text">Monotonic expiry + neutral timeline</text>
+    <text x="454" y="327" class="box-text">Quarantine retained on uncertainty</text>
+    <rect x="454" y="339" width="166" height="19" rx="9" fill="#D1FAE5"/>
+    <text x="465" y="353" class="edge-label" fill="#065F46">ENFORCEMENT SOURCE</text>
+
+    <rect x="430" y="425" width="325" height="116" rx="14" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <text x="454" y="455" class="box-title">Minimal retryable outbox</text>
+    <text x="454" y="481" class="box-text">Opaque IDs + fixture metadata in flight</text>
+    <text x="454" y="504" class="box-text">Idempotent; terminal raw fields scrubbed</text>
+    <text x="454" y="527" class="box-text">Network failure keeps quarantine</text>
+
+    <rect x="430" y="625" width="325" height="144" rx="14" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+    <text x="454" y="655" class="box-title">Monotonic proposal validator</text>
+    <text x="454" y="681" class="box-text">Accept: matching, in-time additive rule</text>
+    <text x="454" y="704" class="box-text">Reject: unlock / delete / disable / shorten</text>
+    <text x="454" y="727" class="box-text">Late, malformed, duplicate → no weakening</text>
+    <rect x="454" y="741" width="202" height="20" rx="10" fill="#FEF3C7"/>
+    <text x="465" y="756" class="edge-label" fill="#92400E">PHONE MAKES FINAL DECISION</text>
+  </g>
+
+  <path d="M350 283 H430" fill="none" stroke="#047857" stroke-width="3" marker-end="url(#arrow-local)"/>
+  <text x="363" y="270" class="edge-label">activate</text>
+
+  <path d="M350 452 C390 452 390 330 430 330" fill="none" stroke="#047857" stroke-width="3" marker-end="url(#arrow-local)"/>
+  <text x="361" y="388" class="edge-label">atomic quarantine</text>
+
+  <path d="M350 495 H430" fill="none" stroke="#047857" stroke-width="3" marker-end="url(#arrow-local)"/>
+  <text x="365" y="484" class="edge-label">queue event</text>
+
+  <path d="M430 294 C382 294 382 715 350 715" fill="none" stroke="#047857" stroke-width="3" marker-end="url(#arrow-local)"/>
+  <text x="366" y="608" class="edge-label" transform="rotate(-90 366 608)">local rules only</text>
+
+  <path d="M592 625 V365" fill="none" stroke="#047857" stroke-width="3" marker-end="url(#arrow-local)"/>
+  <text x="607" y="589" class="edge-label">accepted additive rule</text>
+
+  <rect x="925" y="355" width="170" height="208" rx="20" fill="#F1F5F9" stroke="#64748B" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="949" y="391" class="box-title">Demo-only bridge</text>
+  <text x="949" y="422" class="box-text">IAM-authenticated</text>
+  <text x="949" y="445" class="box-text">Mac proxy</text>
+  <text x="949" y="478" class="box-text">adb reverse</text>
+  <text x="949" y="501" class="box-text">localhost:8081</text>
+  <text x="949" y="534" class="edge-label">TIGHTEN / REVIEW ONLY</text>
+
+  <rect x="1130" y="125" width="430" height="650" rx="24" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="3"/>
+  <text x="1160" y="164" class="boundary-title" fill="#1E40AF">Google Cloud — classification boundary</text>
+  <text x="1160" y="188" class="boundary-note" fill="#1D4ED8">Private service; state and proof, never enforcement</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1170" y="225" width="350" height="120" rx="14" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+    <text x="1194" y="255" class="box-title">Private Cloud Run API</text>
+    <text x="1194" y="281" class="box-text">FastAPI • closed request/response schema</text>
+    <text x="1194" y="304" class="box-text">australia-southeast1 • keyless runtime</text>
+    <text x="1194" y="327" class="box-text">Bounded body, retry, and identity checks</text>
+
+    <rect x="1170" y="415" width="160" height="122" rx="14" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+    <text x="1192" y="445" class="box-title">Firestore</text>
+    <text x="1192" y="471" class="box-text">One event ID</text>
+    <text x="1192" y="494" class="box-text">Hash + result</text>
+    <text x="1192" y="517" class="box-text">Lease fenced</text>
+
+    <rect x="1360" y="415" width="160" height="122" rx="14" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+    <text x="1382" y="445" class="box-title">Google ADK</text>
+    <text x="1382" y="471" class="box-text">One bounded</text>
+    <text x="1382" y="494" class="box-text">classifier agent</text>
+    <text x="1382" y="517" class="box-text">No tools to unlock</text>
+
+    <rect x="1360" y="610" width="160" height="104" rx="14" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+    <text x="1382" y="642" class="box-title">Gemini 3.5</text>
+    <text x="1382" y="666" class="box-title">Flash</text>
+    <text x="1382" y="695" class="box-text">via Vertex AI</text>
+  </g>
+
+  <path d="M755 472 H925" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrow-transport)"/>
+  <text x="786" y="456" class="edge-label">minimal event</text>
+
+  <path d="M1095 420 C1112 420 1112 285 1170 285" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrow-transport)"/>
+
+  <path d="M1170 315 C1118 315 1118 520 1095 520" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrow-transport)"/>
+
+  <path d="M925 525 C850 525 850 695 755 695" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrow-transport)"/>
+  <text x="792" y="674" class="edge-label">bounded proposal</text>
+
+  <path d="M1275 345 V415" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow-cloud)"/>
+  <text x="1214" y="388" class="edge-label">idempotent state</text>
+
+  <path d="M1415 345 V415" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow-cloud)"/>
+  <text x="1428" y="388" class="edge-label">invoke</text>
+
+  <path d="M1440 537 V610" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow-cloud)"/>
+  <text x="1453" y="579" class="edge-label">classify</text>
+
+  <g>
+    <rect x="928" y="690" width="167" height="128" rx="16" fill="#FEF2F2" stroke="#B91C1C" stroke-width="2"/>
+    <line x1="953" y1="713" x2="1070" y2="795" stroke="#B91C1C" stroke-width="8" stroke-linecap="round"/>
+    <line x1="1070" y1="713" x2="953" y2="795" stroke="#B91C1C" stroke-width="8" stroke-linecap="round"/>
+    <text x="943" y="842" class="edge-label" fill="#991B1B">NO CLOUD → STORE / ENFORCER</text>
+  </g>
+
+  <line x1="48" y1="914" x2="123" y2="914" stroke="#047857" stroke-width="4" marker-end="url(#arrow-local)"/>
+  <text x="138" y="919" class="legend">deterministic local authority</text>
+  <line x1="380" y1="914" x2="455" y2="914" stroke="#1D4ED8" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow-transport)"/>
+  <text x="470" y="919" class="legend">bounded demo transport</text>
+  <rect x="714" y="898" width="22" height="22" rx="4" fill="#FEF2F2" stroke="#B91C1C" stroke-width="2"/>
+  <line x1="718" y1="902" x2="732" y2="916" stroke="#B91C1C" stroke-width="3"/>
+  <line x1="732" y1="902" x2="718" y2="916" stroke="#B91C1C" stroke-width="3"/>
+  <text x="749" y="916" class="legend">prohibited authority</text>
+
+  <text x="48" y="962" class="subtitle">Scope: controlled BetBurst/LuckyMirror fixtures in bypassable consumer mode. Managed-device controls and arbitrary app/site coverage are future work.</text>
+</svg>

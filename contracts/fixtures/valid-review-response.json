@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "event_id": "84f4d0dd-1317-4f18-ad21-c3ab975b2f30",
+  "commitment_id": "a5b36c91-352b-42cc-9c6a-f6ffdf12107e",
+  "action": "REVIEW",
+  "target_type": "PACKAGE",
+  "target_value": "com.example.unknown",
+  "classification": "UNKNOWN",
+  "confidence": 0.21,
+  "reason_code": "NEEDS_REVIEW",
+  "reason": "The bounded fixture classifier cannot identify this package."
+}
+

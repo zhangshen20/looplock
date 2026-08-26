@@ -1,0 +1,28 @@
+# Android and Gradle
+.gradle/
+android/.kotlin/
+.idea/
+**/build/
+android/local.properties
+*.iml
+
+# Python
+backend/.venv/
+backend/.pytest_cache/
+backend/.ruff_cache/
+__pycache__/
+*.py[cod]
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+.gcloud/
+*.keystore
+*.jks
+service-account*.json
+
+# macOS and demo artifacts
+.DS_Store
+recordings/
+screenshots/private/
