@@ -1,6 +1,19 @@
 # Submission Evidence Checklist — Draft
 
-Status: engineering acceptance passed twice on 25 August 2026; item-9 safety regression passed on 26 August. Submission capture, sanitization, public links, and owner review remain pending.
+Status: engineering acceptance passed twice on 25 August 2026; item-9 safety regression passed on 26 August; an event-locked producer dry run passed on 27 August. Submission capture, final sanitization, public links, and owner review remain pending.
+
+## Current producer staging — 27 August 2026
+
+- [x] APKs rebuilt successfully and the API-36 reference emulator booted.
+- [x] Residual LuckyMirror was removed and LoopLock local demo data was cleared; the settled app opens on the first disclosure.
+- [x] The shot-by-shot producer cut targets 3:48 and its narration is approximately 340 spoken words.
+- [x] A private synthesized narration rehearsal measured 2:29.9 at 145 words per minute, leaving 78.1 seconds for proof holds and transitions.
+- [x] Local submission preflight passes; the public video URL is the expected remaining external-link gate.
+- [x] Owner approved the no-webcam narrated format, local accessibility enablement, and one use of the existing private demo service for the dry run.
+- [x] One technical dry run passed the hook mechanics, matching-event, offline, weakening-rejection, and privacy gates. Android event prefix `d6f897fa` matched its terminal Firestore document.
+- [ ] One full screen-and-voice stopwatch rehearsal ends by 3:48 with every proof frame legible.
+- [ ] Owner gives fresh authorization before recording or using the private service for a recording take.
+- [ ] The final recording passes the review in this checklist.
 
 ## Ratchet run record
 

@@ -162,6 +162,7 @@ The consumer prototype uses an explicitly enabled accessibility service and is b
 
 - [Architecture diagram and text alternative](docs/submission/architecture.md)
 - [Four-minute recording script](docs/submission/demo-script.md)
+- [Shot-by-shot producer run sheet](docs/submission/demo-run-sheet.md)
 - [Evidence and sanitization checklist](docs/submission/evidence-checklist.md)
 - [Owner-review Devpost draft and field inventory](docs/submission/devpost-draft.md)
 - [Detailed build evidence](docs/hackathon-build/build-notes.md)
