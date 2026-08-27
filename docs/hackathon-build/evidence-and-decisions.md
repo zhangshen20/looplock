@@ -4,7 +4,7 @@ Last checked: 26 August 2026 (Melbourne). Live Devpost event responses were refr
 
 ## Outcome
 
-LoopLock is viable as a hackathon proof of concept if it is presented as an event-driven Taskmaster workflow with a strict safety split:
+LoopLock is viable as an application-ready hackathon beta when presented as an event-driven Taskmaster workflow with a strict safety split:
 
 - deterministic Android code blocks or quarantines;
 - the cloud agent may classify an event and propose an additive protection rule;
@@ -76,7 +76,7 @@ The 24 August organizer checklist additionally recommends showing the working pr
 | Primary user | Adult who voluntarily wants protection during a self-chosen recovery commitment | Avoids coercive parent/employer/partner use and keeps consent legible |
 | Job to be done | Preserve a calm-state decision during an urge and make the next workaround harder without exposing private behavior | More precise than “help people stop gambling” |
 | Invention | A one-way protection ratchet: attempted loopholes become additive rules | Distinct from static blocklists and recommendation companions |
-| MVP enforcement | App-first consumer prototype using explicit accessibility permission and a foreground blocking experience | Best chance of a visible Android demo before the deadline |
+| MVP enforcement | Application-ready consumer beta using explicit accessibility permission and a foreground blocking experience | Working installable Android product within the supported reference environment |
 | Adaptive event | A newly installed demo app is locally quarantined, then classified asynchronously | Bounded event; avoids surveilling every foreground app or every destination |
 | Agent authority | `TIGHTEN` or `REVIEW` only; never `ALLOW`, `UNLOCK`, `DELETE`, or shorter expiry | Makes the safety boundary testable in code |
 | Site blocking | Production vision; stretch only after the app ratchet is stable | DNS/HTTPS coverage and Play-policy work are too risky for the critical path |

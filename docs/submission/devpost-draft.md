@@ -18,7 +18,7 @@ Live event metadata was refreshed on 26 August 2026. Devpost reports submissions
 
 Static gambling blockers remember a list. The difficult moment comes when a person finds a new app, mirror, or other workaround and the blocker remains unchanged. LoopLock asks a more precise question: how can a phone preserve the decision someone made while calm, adapt to a new loophole, and still ensure automation can never weaken protection?
 
-LoopLock is designed for voluntary adult self-use on a personally owned Android device. It is a research prototype, not treatment, crisis support, surveillance, or a promise of tamper-proof protection.
+LoopLock is an application-ready beta for voluntary adult self-use on a personally owned Android device. It is a working, installable product for the documented Android reference environment—not treatment, crisis support, surveillance, a global public release, or a promise of tamper-proof protection.
 
 ### What it does
 
@@ -30,7 +30,7 @@ The demo disables network access and proves the accepted LuckyMirror rule still 
 
 ### How we built it
 
-- Native Kotlin, Jetpack Compose, Room, WorkManager, and a package-only Android accessibility service for the consumer proof of concept.
+- Native Kotlin, Jetpack Compose, Room, WorkManager, and a package-only Android accessibility service for the application-ready consumer beta.
 - Versioned JSON Schemas shared by Kotlin and Python for a closed event and proposal contract.
 - FastAPI plus Google Agent Development Kit on a private Cloud Run service.
 - Gemini 3.5 Flash through Vertex AI for bounded fixture classification.

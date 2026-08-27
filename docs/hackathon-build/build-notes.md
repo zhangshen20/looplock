@@ -315,3 +315,12 @@ Item 10: prepare the reproducible README, final evidence package, four-minute pu
 - Added a 3:48 producer run sheet, reset/privacy checklist, matching-event rule, truthful fallbacks, and stop conditions. The accountability preview was cut from judged time because it does not strengthen the central Taskmaster proof.
 - A private local narration-only rehearsal measured 2:29.9 at 145 words per minute, leaving 78.1 seconds for proof holds and transitions. This passes the script-length gate but does not replace the full screen-and-voice recording rehearsal.
 - No raw video was recorded, no public upload was made, no Devpost field was edited, and no Cloud/IAM configuration changed. Fresh owner authorization remains required before the event-locked recording uses the existing private service.
+
+## 27 August 2026 — Owner-directed application-ready positioning
+
+- The owner rejected the earlier early-stage framing and directed LoopLock to be presented as an application-ready product.
+- Adopted the consistent term **application-ready Android beta** across the in-app badge, README, Devpost draft, producer narration, product pack, technical specification, infrastructure notes, and risk language.
+- Defined the claim operationally: the product builds and installs, persists and enforces a commitment locally, integrates end to end with its private agent service, survives the documented failure cases, and passes automated/on-device verification in the supported API-36 reference environment.
+- Preserved the truthful general-availability boundary. The application-ready claim does not imply global availability, Play approval, clinical validation, arbitrary app/site coverage, public mobile authentication, managed-device authority, or tamper-proof consumer enforcement.
+- This is a positioning and disclosure change, not a relaxation of the safety boundary or a claim that currently unbuilt public-distribution components exist.
+- Re-timed the revised narration privately at 2:29.6 using a clear 145-word-per-minute system voice, leaving 78.4 seconds inside the 3:48 producer cut.

@@ -56,7 +56,7 @@ Planning assumption: one primary Codex-assisted build lane over three to four ca
 
 ### Must ship
 
-- Android onboarding with a clear research-prototype notice and permission disclosure.
+- Android onboarding with a clear application-ready beta notice, supported-environment boundary, and permission disclosure.
 - Selection of one harmless demo app to block.
 - A five-minute demo commitment representing a 24-hour production commitment.
 - Immutable commitment state while active: end time cannot move earlier and rules cannot be removed.

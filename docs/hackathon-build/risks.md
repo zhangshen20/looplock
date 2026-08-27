@@ -6,7 +6,7 @@ Scales: likelihood and impact are Low, Medium, or High. Owners should update tri
 
 | Risk | Likelihood | Impact | Mitigation | Trigger / response |
 | --- | --- | --- | --- | --- |
-| User mistakes prototype for treatment or guaranteed harm prevention | Medium | High | Research-prototype copy, limitations, support disclaimer, no clinical claims | If copy says “prevents” or “treats,” block release and rewrite |
+| User mistakes the beta for treatment or guaranteed harm prevention | Medium | High | Application-ready beta copy, supported-environment limits, support disclaimer, no clinical claims | If copy says “prevents” or “treats,” block release and rewrite |
 | Coercive use by partner, parent, employer, or clinician | Medium | High | Adult self-use target, local consent, no remote setup, no covert mode | If a control can be configured without device-user action, remove it |
 | False positive quarantines a legitimate new app | High | Medium | Strict option off by default, clear consequence, `REVIEW` state, short demo commitment | If production framing implies guilt, change to neutral quarantine language |
 | User feels trapped or distressed | Medium | High | Exact end time, delayed recovery path, five-minute demo duration, no indefinite policy | If expiry cannot be trusted, do not demo active commitment |
@@ -28,7 +28,7 @@ Scales: likelihood and impact are Low, Medium, or High. Owners should update tri
 
 | Risk | Likelihood | Impact | Mitigation | Trigger / response |
 | --- | --- | --- | --- | --- |
-| Accessibility use is rejected or requires additional review | High | High | Treat APK as sideloaded research prototype; prominent disclosure; declaration plan; no deceptive automation | Never claim Play readiness in submission |
+| Accessibility use is rejected or requires additional review | High | High | Treat APK as an application-ready sideloaded beta; prominent disclosure; declaration plan; no deceptive automation | Never claim Play readiness in submission |
 | `VpnService` use does not fit a permitted core purpose | Medium | High | Keep out of P0; document firewall rationale and declaration requirements | Do not include VPN in APK unless the spike is defensible |
 | Accessibility is interpreted as autonomous execution | Medium | High | Agent never drives accessibility actions; deterministic service only reads package/window events and redirects based on local rules | Architecture review must show no agent-to-AccessibilityService command path |
 | Store metadata overstates control | Medium | High | Use exact consumer-mode language and screenshots | Any “cannot be bypassed” claim blocks release |

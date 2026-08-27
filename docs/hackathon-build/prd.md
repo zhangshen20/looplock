@@ -4,7 +4,7 @@
 
 LoopLock is a voluntary Android recovery firewall for adults experiencing online-gambling urges. The user makes a time-bound policy while calm. During that commitment, deterministic local code enforces selected rules and may quarantine newly installed apps if the user explicitly pre-authorized that behavior. A cloud agent can classify a new event and propose a narrower protection rule, but it cannot unlock, delete, shorten, or weaken anything.
 
-The hackathon product is a research proof of concept, not treatment, crisis support, a production security product, or a promise of tamper-proof protection.
+The hackathon product is an application-ready Android beta: it is installable, persistent, end-to-end integrated, and verified on the documented reference environment. It is not treatment, crisis support, a globally available public release, a production security guarantee, or a promise of tamper-proof protection.
 
 ## Product Principles
 
@@ -23,7 +23,7 @@ An adult on a personally owned Android device who voluntarily wants extra fricti
 
 ## Core User Journey
 
-1. Understand the prototype, data use, permissions, and consumer-mode limits.
+1. Understand the supported beta environment, data use, permissions, and consumer-mode limits.
 2. Select a known demo app to block.
 3. Optionally pre-authorize quarantine of apps installed during the commitment.
 4. Review a plain-language policy summary and start a five-minute demo commitment.
@@ -75,7 +75,7 @@ As a prospective user, I want a short explanation of what LoopLock can observe, 
 
 Acceptance summary:
 
-- The first run distinguishes research prototype, consumer mode, and managed-device vision.
+- The first run distinguishes the application-ready beta, consumer mode, general-availability gaps, and managed-device vision.
 - Accessibility and package-event use are disclosed immediately before permission requests.
 - The UI states that permissions can be revoked and the app can be removed.
 - No permission is requested before the disclosure is accepted.

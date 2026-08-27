@@ -220,7 +220,7 @@ private fun BrandLockup(dark: Boolean) {
             color = if (dark) Color.White.copy(alpha = 0.08f) else DeepTeal.copy(alpha = 0.08f),
         ) {
             Text(
-                "RESEARCH PROTOTYPE",
+                "APPLICATION-READY",
                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
                 style = MaterialTheme.typography.bodySmall,
                 color = if (dark) SkyBlue else DeepTeal,

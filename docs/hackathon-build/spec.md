@@ -2,7 +2,7 @@
 
 ## Overview
 
-LoopLock is a greenfield Android and Google Cloud proof of concept. The technical design preserves one hard boundary: Android performs deterministic blocking from local state; the ADK/Gemini service may classify a quarantined demo package and propose a commitment-scoped package rule, but it has no interface for deleting, allowing, shortening, or directly enforcing rules.
+LoopLock is an application-ready Android beta with an integrated private Google Cloud agent service. The technical design preserves one hard boundary: Android performs deterministic blocking from local state; the ADK/Gemini service may classify a quarantined demo package and propose a commitment-scoped package rule, but it has no interface for deleting, allowing, shortening, or directly enforcing rules.
 
 This specification implements the confirmed app-first MVP. `VpnService`, site blocking, Pub/Sub, live accountability delivery, Play Store publication, and managed-device controls are outside the critical path.
 

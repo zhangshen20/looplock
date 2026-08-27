@@ -1,6 +1,6 @@
 # LoopLock demo cloud deployment
 
-This directory describes **demo-only infrastructure** for the hackathon proof of concept. It is not the production mobile-authentication design.
+This directory describes **demo-only infrastructure** supporting the application-ready beta. It is not the public mobile-authentication design required for general availability.
 
 ## Current state
 

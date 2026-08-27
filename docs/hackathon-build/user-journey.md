@@ -4,7 +4,7 @@
 
 | Stage | User state | User action | Product response | Safety requirement |
 | --- | --- | --- | --- | --- |
-| Consider | Calm but uncertain | Opens LoopLock | Explains prototype, limits, permissions, and data use | No fear, shame, or false guarantee |
+| Consider | Calm but uncertain | Opens LoopLock | Explains the application-ready beta, supported environment, limits, permissions, and data use | No fear, shame, or false guarantee |
 | Configure | Intentionally preparing | Selects app, duration, and optional new-install quarantine | Shows exact consequences and recovery timing | No preselected strict option |
 | Commit | Ready to externalize a decision | Confirms policy | Creates immutable active policy and consent receipt | No instant override hidden elsewhere |
 | Urge | Impulsive | Opens selected demo app | Blocks locally and records a neutral event | Works offline; no cloud decision needed |
@@ -16,7 +16,7 @@
 
 ## First-Run Journey
 
-1. **Welcome:** “LoopLock is a research prototype that helps uphold a policy you choose while calm.”
+1. **Welcome:** “LoopLock is an application-ready Android beta that helps uphold a policy you choose while calm.”
 2. **Limits:** “On a personal Android phone, you can revoke permissions or uninstall this app. LoopLock does not claim tamper-proof protection.”
 3. **Data:** package name/label for the demo classification only; no screen text, keystrokes, contacts, messages, financial data, or full app inventory.
 4. **Permission disclosure:** explain accessibility event use immediately before opening Android settings.

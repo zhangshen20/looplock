@@ -1,12 +1,12 @@
 # LoopLock — an adaptive recovery firewall
 
-LoopLock is an Android-first proof of concept for a simple promise: **static blockers remember a list; LoopLock remembers the loophole.** An adult voluntarily creates a time-bound policy while calm. Deterministic Android code blocks the selected demo app and can immediately quarantine a separately consented new install. A bounded Gemini agent may classify that event and propose one additive rule, but it can never unlock, delete, disable, or shorten protection.
+LoopLock is an application-ready Android beta built around a simple promise: **static blockers remember a list; LoopLock remembers the loophole.** An adult voluntarily creates a time-bound policy while calm. Deterministic Android code blocks the selected demo app and can immediately quarantine a separately consented new install. A bounded Gemini agent may classify that event and propose one additive rule, but it can never unlock, delete, disable, or shorten protection.
 
 This project targets the **Taskmaster** category of the [All Things Agentic Hackathon](https://allthingsagentichackathon.devpost.com/). It uses **Gemini 3.5 Flash**, **Google Agent Development Kit (ADK)**, **Cloud Run**, and **Firestore**. The live requirements were rechecked on 26 August 2026; submissions remain open until 31 August 2026 at 5:00 PM Pacific Time (1 September at 10:00 AM Melbourne).
 
-> Safety boundary: LoopLock is a voluntary research prototype, not treatment, crisis support, a production security product, or a tamper-proof guarantee. Consumer mode can be disabled or uninstalled. Strong managed-device controls require separate device-owner provisioning, governance, and product design.
+> Product boundary: “application-ready” means the product builds, installs, persists its policy, enforces locally, integrates with its private agent service, and passes the documented tests on the supported Android reference environment. It does not mean globally available, Play-approved, clinically validated, or tamper-proof. Consumer mode can be disabled or uninstalled; strong managed-device controls require separate provisioning, governance, and product design.
 
-## What the proof of concept demonstrates
+## What the application-ready beta delivers
 
 1. The user reviews a five-minute demo commitment that represents a longer production policy and explicitly opts into the LuckyMirror install-quarantine scenario.
 2. Android locally blocks **BetBurst Demo** without a network or model call.
@@ -156,7 +156,7 @@ The reference deployment is a private Cloud Run service in `australia-southeast1
 
 LoopLock observes only foreground package identity needed for targeted local rules. It does **not** retrieve accessibility window content, typed text, screenshots, messages, contacts, financial data, a full installed-app inventory, browsing history, or third-party gambling data. Firestore stores opaque IDs, a target hash, bounded result fields, and timestamps—not an account or raw activity history. Terminal Android processing scrubs raw package metadata from the outbox.
 
-The consumer prototype uses an explicitly enabled accessibility service and is bypassable. A production app would require Google Play policy review, prominent disclosure, accessibility and privacy testing, false-positive operations, security review, and lived-experience/clinical co-design. Package suspension, uninstall prevention, and stronger network controls belong to a separately provisioned managed-device mode and are not capabilities claimed by this APK.
+The application-ready consumer beta uses an explicitly enabled accessibility service and is bypassable. General public availability would require Google Play policy review, prominent disclosure, accessibility and privacy testing, false-positive operations, security review, lived-experience/clinical co-design, and a production mobile-authentication path. Package suspension, uninstall prevention, and stronger network controls belong to a separately provisioned managed-device mode and are not capabilities claimed by this APK.
 
 ## Submission evidence
 

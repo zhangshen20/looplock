@@ -1,6 +1,6 @@
 # LoopLock Public Demo Run Sheet — Producer Cut
 
-Status: event-locked technical dry run passed on 27 August 2026. A private synthesized narration rehearsal measured 2:29.9 at 145 words per minute, leaving 78.1 seconds for proof holds and transitions inside the 3:48 cut. The full screen-and-voice stopwatch rehearsal, fresh recording authorization, final privacy review, upload, publication, and final owner approval remain pending.
+Status: event-locked technical dry run passed on 27 August 2026. After the application-ready wording update, a private synthesized narration rehearsal measured 2:29.6 at 145 words per minute, leaving 78.4 seconds for proof holds and transitions inside the 3:48 cut. The full screen-and-voice stopwatch rehearsal, fresh recording authorization, final privacy review, upload, publication, and final owner approval remain pending.
 
 ## Approved producer format
 
@@ -27,7 +27,7 @@ Do not spend judged time on the accountability preview. It is a safe supporting 
 | **1:28–2:10** | Show three sanitized proof frames: (1) the private Cloud Run service/revision and `australia-southeast1`; (2) `backend/src/looplock_agent/agent.py` beside `config.py`, with `google.adk.agents.Agent` and `gemini-3.5-flash` legible; (3) one terminal Firestore document. The Firestore document name must begin with the same eight characters shown on Android. Frame only `schema_version`, opaque `event_id`/`commitment_id`, `target_hash`, bounded status/result fields, and timestamps. Add `PRIVATE CLOUD RUN · DEMO-ONLY IAM BRIDGE`. | “This is the private Cloud Run service in Australia. It requires authentication; the Mac proxy on port 8081 is a demo-only bridge, not a production mobile login design. The code names Google ADK and Gemini 3.5 Flash. Firestore has one terminal document whose ID matches Android. It stores opaque IDs, a target hash, bounded result fields, and timestamps—not raw package data, an account, a prompt, or model reasoning.” | Hide account menus, email addresses, service-account addresses, billing, tokens, raw requests, prompts, reasoning, unrelated projects, and browser tabs. Do not claim that a console page proves a value that is not legible. |
 | **2:10–2:36** | Visibly turn emulator Wi-Fi and mobile data off, then launch LuckyMirror and hold the local block overlay. Add `OFFLINE · LOCAL RULE`. | “Now Wi-Fi and mobile data are off. LuckyMirror is still blocked because enforcement reads only locally validated rules. Cloud can classify; it has no path to the rule store or enforcer.” | Capture the network-off state and the block in the same run. Do not use host-network loss as a substitute for the emulator state. |
 | **2:36–3:02** | Return to LoopLock, run **Run rejected UNLOCK fixture**, and frame `UNLOCK rejected`, `ACTION_NOT_ALLOWED — quarantine retained`, and `Commitment end unchanged`. Add `UNLOCK REJECTED`. | “I send a deliberately invalid `UNLOCK` proposal through the real local validator. Android rejects it as `ACTION_NOT_ALLOWED`. The tightened rule remains, and the exact commitment end is unchanged. AI cannot unlock, delete, disable, or shorten protection.” | Keep the commitment-end value visible long enough to compare with the earlier status shot. |
-| **3:02–3:40** | Show `docs/submission/architecture.png` full frame. Zoom only if the Android boundary, dashed proxy, Google Cloud boundary, and red prohibited path remain readable. | “The green Android boundary is the only enforcement authority. Dashed blue paths carry minimal events and bounded proposals through the demo-only proxy. The red barrier means no cloud-to-store or cloud-to-enforcer path. This is an Android-first consumer proof of concept using two harmless fixtures. Arbitrary app or site coverage, Play distribution, public mobile authentication, and managed-device control remain production work.” | Record this card separately; it does not depend on the five-minute commitment. |
+| **3:02–3:40** | Show `docs/submission/architecture.png` full frame. Zoom only if the Android boundary, dashed proxy, Google Cloud boundary, and red prohibited path remain readable. | “The green Android boundary is the only enforcement authority. Dashed blue paths carry minimal events and bounded proposals through the demo-only proxy. The red barrier means no cloud-to-store or cloud-to-enforcer path. This is an application-ready Android beta using two harmless fixtures. Broader app and site coverage, Play distribution, public mobile authentication, and managed-device control remain general-availability work.” | Record this card separately; it does not depend on the five-minute commitment. |
 | **3:40–3:48** | Hold the full architecture or a clean LoopLock wordmark. | “Every attempted workaround can become the next protection rule—but never the next way out.” | End cleanly. No Devpost or upload claim. |
 
 ## Capture order
@@ -98,7 +98,7 @@ Use a stopwatch and call out these gates without recording:
 - [ ] Consumer-mode bypassability and managed-device future scope are spoken.
 - [ ] The spoken run ends by `03:48`.
 
-The private narration-only timing pass completed at `02:29.9` using a clear 145-word-per-minute system voice. It proves the script is not the timing bottleneck; it does not replace the full proof-frame rehearsal or owner review of the final voice track.
+The updated private narration-only timing pass completed at `02:29.6` using a clear 145-word-per-minute system voice. It proves the script is not the timing bottleneck; it does not replace the full proof-frame rehearsal or owner review of the final voice track.
 
 Record the actual elapsed time and any missed gate in a private producer note. Do not place raw recordings, private screenshots, or private Cloud evidence in Git.
 
@@ -112,7 +112,7 @@ Record the actual elapsed time and any missed gate in a private producer note. D
 - **Pass:** the Cloud Run service/revision and region, private invocation state, Google ADK import, and `gemini-3.5-flash` configuration were verified with read-only sanitized checks.
 - **Fixed recording blocker:** proxy-only disconnection caused exponential retry and commitment expiry. Use Android network constraints for the queued shot, then enable networking before the first worker attempt.
 - **Fixed recording blocker:** an old block overlay persists until **Return to LoopLock** is tapped. Clear it before launching the next fixture.
-- **Pass:** a private narration-only timing pass completed at `02:29.9`, leaving `01:18.1` for proof holds and transitions in the target cut.
+- **Pass:** the application-ready narration-only timing pass completed at `02:29.6`, leaving `01:18.4` for proof holds and transitions in the target cut.
 - **Pending:** the owner confirms the full screen-and-voice rehearsal and proof holds end by `03:48`.
 
 ## Fallback footage and stop conditions

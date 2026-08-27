@@ -1,2 +1,1 @@
-# LoopLock keeps release shrinking disabled for the hackathon proof of concept.
-
+# LoopLock keeps release shrinking disabled for this time-boxed application-ready beta.
