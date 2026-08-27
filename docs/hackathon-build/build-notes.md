@@ -297,3 +297,13 @@ Item 10: prepare the reproducible README, final evidence package, four-minute pu
 - A fresh public clone exposed that `submission-preflight.sh` required ignored local paths to exist. Updated the ignore verification to use `git check-ignore --no-index` and probe a child path for directory-only patterns, so a pristine clone validates the ignore contract correctly.
 - Re-cloned the corrected public `main` branch into a new temporary directory. The publication preflight passed, followed by 28 backend tests and 27 Android JVM tests from the published source.
 - Public video upload, Devpost editing, architecture upload, and submission remain unperformed and unauthorized.
+
+## 27 August 2026 — Owner-approved recovery-safe visual redesign
+
+- The owner approved the new “sunrise after the loop” direction: deep navy, restorative teal and sky, soft lavender, and sparing warm coral for attention states. The interface intentionally avoids casino imagery, jackpots, streaks, confetti, reward loops, or shame-based language.
+- Rebuilt the Compose experience around a consistent visual system, custom loop-and-shield mark, calm-state onboarding, explicit Android-access disclosure, policy selection, final review, honest protection status, neutral accountability preview, timeline, and delayed-recovery explanation.
+- Kept optional new-install quarantine off by default and visually distinct when deliberately selected. All commitment timing, rule-source, privacy, consumer-mode, and managed-device limitations remain visible before activation.
+- Restyled the accessibility block overlay without changing its authority or event handling. It still reports a deterministic local rule, the immutable commitment end, and that AI did not make the blocking decision.
+- Preserved the existing automation tags and locally verified the full opening, access, policy, review, and active-commitment flow on the API-36 emulator. With accessibility disabled, the active screen correctly showed `Action required` rather than claiming protection.
+- Final verification passed: 28 backend tests, 27 Android JVM tests, 14 API-36 on-device Room/policy tests, debug assembly/install, visual inspection at 1080×2424, and the publication preflight safety/credential checks.
+- No rule schema, policy monotonicity, Cloud resource, IAM, Firestore data, public video, Devpost field, architecture upload, or external publication was changed. Item 10 remains open for recording, public video review, and final submission approval.
